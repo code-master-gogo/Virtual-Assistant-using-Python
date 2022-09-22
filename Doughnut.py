@@ -50,12 +50,12 @@ def takeCommand():
     return query
 
 def sendEmail(to_address, content):
-    user = 'hyjragynamo@yahoo.com'
-    password = 'omvhkyvblqdtdenh'
-    fr_address = 'hyjragynamo@yahoo.com'
+    user = 'ENTER YOUR MAIL ID HERE'
+    password = 'ENTER APP PASSWORD'
+    fr_address = 'ENTER YOUR MAIL ID HERE'
     smtp_host = 'smtp.mail.yahoo.com' 
     smtp_port = 587
-    subject = 'Mail From Virtual Assistant named Doughnut Doggo'
+    subject = 'Mail From Virtual Assistant named Doughnut'
     server = smtp.SMTP(host=smtp_host, port=smtp_port)
     server.ehlo()
     server.starttls()
@@ -107,13 +107,14 @@ if __name__ == "__main__":
             codePath = "C:\\Users\\anubh\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
             os.startfile(codePath)
 
-        elif 'email to anubhav' in query:
+        elif 'email to reciever' in query:
             try:
                 speak("What should I say?")
                 content = takeCommand()
-                to_address = "anubhavpandey11@gmail.com"
+                to_address = "ENTER MAIL ID OF RECIEVER"
                 sendEmail(to_address, content)
                 speak("Email has been sent!")
             except Exception as e:
                 print(e)
-                speak("Sorry prabhu dayal! I am unable to send this email!")
+                speak("Sorry! I am unable to send this email!")
+          
